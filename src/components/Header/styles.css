@@ -1,0 +1,30 @@
+header {
+    background: var(--primary-color);
+    padding: 0 50px;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.cart-badge {
+    background: crimson;
+    padding: 0px 5px;
+    border-radius: 50%;
+}

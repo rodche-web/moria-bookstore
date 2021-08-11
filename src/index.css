@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-color: rgb(110, 110, 255);
+    --btn-primary: rgb(63, 160, 63);
+    --btn-primary-hover: rgb(63, 190, 63);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.cart-btn {
+    padding: 10px;
+    background: var(--btn-primary);
+    color: white;
+    border: none;
+    margin: 10px;
+}
+
+.cart-btn:hover {
+    background: var(--btn-primary-hover);
 }

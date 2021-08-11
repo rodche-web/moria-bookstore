@@ -1,0 +1,17 @@
+.shop-item {
+    width: 150px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.shop-item img {
+    width: 100%;
+}
+
+.cart-btn {
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    margin: 10px;
+}

@@ -1,0 +1,8 @@
+.shop-list {
+    width: 70%;
+    display: flex;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
