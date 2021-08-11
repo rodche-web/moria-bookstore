@@ -13,7 +13,7 @@ const ShopList = () => {
     const itemsRef = firestore.collection('shop_items')
 
     useEffect(() => {
-        itemsRef.get()
+        itemsRef.orderBy('author').get()
         .then(snap => {
             snap.forEach(doc => {
                 const {name, author, price, file_name} = doc.data();

@@ -3,6 +3,7 @@ import {FaTrash} from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { incrementQuantity, decrementQuantity, removeFromCart } from '../../redux/shopSlice';
 import { useDispatch } from 'react-redux';
+import CheckoutButton from '../../components/CheckoutButton/CheckoutButton';
 import './styles.css';
 
 const ShoppingCart = () => {
@@ -31,7 +32,9 @@ const ShoppingCart = () => {
                     <h3>Total</h3>
                     <h3>${cartTotal}</h3>
                 </div>
-                <button className='cart-btn'>Check Out</button>
+                <div>
+                    <CheckoutButton price={cartTotal} />
+                </div>
             </div>  
         </div>
     )
