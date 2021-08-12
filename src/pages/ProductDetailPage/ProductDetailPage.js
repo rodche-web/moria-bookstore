@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { firestore, storage } from "../../firebase/config";
 import { useDispatch, useSelector } from "react-redux";
 import {FaShoppingCart} from 'react-icons/fa'
@@ -9,6 +9,7 @@ import './styles.css';
 
 
 const ProductDetailPage = () => {
+    const [shortDesc, setShortDesc] = useState(true)
     const {productId} = useParams();
     const product = useSelector(state => state.shop.productDetail);
     const cart = useSelector(state => state.shop.cart);
@@ -45,7 +46,7 @@ const ProductDetailPage = () => {
             <div className='product-description'>
                 <h1>{product.name}</h1>
                 <h3>{product.author}</h3>
-                <p>{product.description}</p>
+                <p>{product && (shortDesc ? (product.description.substring(0, 100) + '...') : product.description)} <span className='desc-toggle' onClick={() => setShortDesc(!shortDesc)}>{shortDesc ? 'Read More' : 'Read Less'}</span></p>
                 <h3>Price: ${product.price}</h3>
                 <button className='cart-btn' onClick={() => add({
                     name: product.name,
