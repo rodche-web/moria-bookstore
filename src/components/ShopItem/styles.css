@@ -4,14 +4,12 @@
     text-align: center;
 }
 
+.shop-item-navlink {
+    text-decoration: none;
+    color: inherit;
+}
+
 .shop-item img {
     width: 100%;
 }
 
-.cart-btn {
-    padding: 10px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    margin: 10px;
-}

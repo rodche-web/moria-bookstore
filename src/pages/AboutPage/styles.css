@@ -1,0 +1,22 @@
+.about-page {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-bookstore-image {
+    text-align: center;
+    margin: 20px;
+}
+
+.about-bookstore-image img {
+    width: 80%;
+}
+
+.about-page h1 {
+    margin-bottom: 20px;
+}
+
+.about-description > p, .about-description > h3 {
+    margin-bottom: 20px;
+}

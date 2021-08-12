@@ -1,12 +1,13 @@
 import {FaShoppingCart} from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux';
+import {NavLink} from 'react-router-dom';
 
 import { addToCart, incrementQuantity } from '../../redux/shopSlice';
 
 import './styles.css'
 
 const ShopItem = ({item}) => {
-    const {name, author, price, url} = item;
+    const {id, name, author, price, url} = item;
     const dispatch = useDispatch();
     const cart = useSelector(state => state.shop.cart);
 
@@ -22,7 +23,9 @@ const ShopItem = ({item}) => {
         <div className='shop-item'>
             <img src={url} alt={name} />
             <div>
-                <h3>{name}</h3>
+                <NavLink className='shop-item-navlink' to={`/products/${id}`}>
+                    <h3>{name}</h3>
+                </NavLink>
                 <p>{author}</p>
                 <p>${price}</p>
             </div>
