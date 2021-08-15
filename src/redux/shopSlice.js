@@ -3,7 +3,14 @@ import {createSlice} from '@reduxjs/toolkit';
 const initialState = {
     shopItems: [],
     cart: [],
-    productDetail: {}
+    productDetail: {
+        id: '',
+        name: '', 
+        author: '', 
+        price: 0, 
+        url: '', 
+        description: ''
+    }
 }
 
 export const shopSlice = createSlice({
