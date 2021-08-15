@@ -28,7 +28,7 @@ const ProductDetailPage = () => {
         })
         .catch(err => console.log(err));
         return () => emptyProductDetail();
-    })
+    },[])
 
     const add = item => {
         if(cart && cart.find(cartItem => cartItem.name === item.name)) {
