@@ -26,7 +26,7 @@ const ShopList = () => {
         })
         .catch(err => console.log(err));
         return () => dispatch(emptyShopItems());
-    },[dispatch, itemsRef])
+    },[])
 
     if (!shopItems) {
         return <h1>Loading...</h1>
